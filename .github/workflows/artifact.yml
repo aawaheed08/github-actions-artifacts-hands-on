@@ -26,16 +26,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Create a text file
+    - name: Create artifacts folder
       run: |
         mkdir artifacts
         cd artifacts
 
-    - name: Archive text file
+    - name: Download text file
       uses: actions/download-artifact@v2
       with:
         name: hello-artifact
         path: ./artifacts     
         
-    - name: Echo a text file
+    - name: Read a text file
       run: cat ./artifacts/hello.txt        
