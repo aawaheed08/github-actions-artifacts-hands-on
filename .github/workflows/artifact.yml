@@ -25,6 +25,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      
+    - name: Create a text file
+      run: |
+        mkdir artifacts
+        cd artifacts
 
     - name: Archive text file
       uses: actions/download-artifact@v2
